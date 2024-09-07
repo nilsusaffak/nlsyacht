@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="script.js"></script>
+    <title>NLS YATÇILIK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!--header section starts-->
+<header class="header">
+    <div class="logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/6086b8272865e24be1cb3bfa/1621806397368-0GGG655SXRDYM8L871W7/NLS-Color-Denim-Asset+7-800px.png" alt="" class="logo" width="150" height="50">
+</div> 
+
+<nav class="navbar">
+    <a href="#anasayfa">Home</a>
+    <a href="#hakkımızda">About Us</a>
+    <a href="#Tekneler">Boats</a>
+    <a href="#İletişim">Contact</a>
+</nav>
+
+
+</header>
+
+<!--header section ends-->
+
+<!--form section starts-->
+
+<section id="anasayfa" class="section">
+    <h2>Customer Form</h2>
+    <form id="reservationForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span class="error" id="nameError"></span>
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+            <span class="error" id="emailError"></span>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span class="error" id="passwordError"></span>
+        </div>
+        <button type="submit">Send</button>
+        
+    </form>
+</section>
+
+<script src="script.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#reservationForm').submit(function(event) {
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var password = $('#password').val();
+            var isValid = true;
+
+            // İsim alanı boş mu 
+            if (!name) {
+                $('#nameError').text('Please enter your name.');
+                isValid = false;
+            } else {
+                $('#nameError').text('');
+            }
+
+            // E-posta doğruluğu
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                $('#emailError').text('Enter a valid email address.');
+                isValid = false;
+            } else {
+                $('#emailError').text('');
+            }
+
+            // Şifre uzunluğu 
+            if (password.length < 8) {
+                $('#passwordError').text('Password must be at least 8 characters.');
+                isValid = false;
+            } else {
+                $('#passwordError').text('');
+            }
+
+            // Formun gönderilmesini engelleme
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
+
+<!--form section ends-->
+
+<section class="anasayfa" id="anasayfa">
+    <div class="content">
+        <h3>Hey You!</h3>
+        <p>Do You Want to Rent Your Dream Yacht?</p>
+    </div>
+</section>
+
+<!--hakkımızda section starts-->
+
+<section class="hakkımızda" id="Hakkımızda">
+  <h4 id="hakkımızda">About Us</h4>    
+</section>
+
+
+
+<!-- Resim Slides Gösterisi Başlangıcı -->
+<section class="slideshow-container" onmouseover="pauseSlides()" onmouseout="resumeSlides()">
+    <!-- Slide 1 -->
+    <div class="mySlides fade">
+        <img src="images/tekneyeni.jpg" style="width:100%">
+    </div>
+    <!-- Slide 2 -->
+    <div class="mySlides fade">
+        <img src="images/tekneyeni2.jpg" style="width:100%">
+    </div>
+    <!-- Slide 3 -->
+    <div class="mySlides fade">
+        <img src="images/tekneyeni3.jpg" style="width:100%">
+    </div>
+<!-- Slide 4 -->
+<div class="mySlides fade">
+    <img src="images/slayt1.jpg" style="width:100%">
+</div>
+
+    <!-- Önceki ve Sonraki Düğmeleri -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</section>
+<!-- Resim Slides Gösterisi Bitişi -->
+
+
+<section class="hakkımızda" id="Hakkımızda">
+    <h5>NLS YACHTING</h4>  
+    <p1>Offering the most unforgettable experiences for sea enthusiasts, NLS Yachting serves with its years of experience and expert team. We are here to make your blue cruises unforgettable with our modern and comfortable boats. In order to offer you, our valued guests, a dream holiday, we plan every detail carefully and work to improve our service quality every day.</p>
+    <p1>Sail to the infinity of the blue with special routes, delicious meals and our professional team and live the most special moments of your life. As NLS Yachting, we bring together passion for maritime and service quality. Enjoy the sea with us, we promise you a journey full of unforgettable memories.</p>
+</section>
+
+
+<!-- DOM MANİP. -->
+
+<h7>Boats</h2>
+
+<!-- Tekneler listesi -->
+<ul id="tekneListesi">
+    <li>BAVARIA CRUISER 46</li>
+    <li>HANSE 460</li>
+    <li>VF 80-04</li>
+</ul>
+
+<h1>Add Boat</h1>
+
+<form id="newBoatForm">
+    <input type="text" id="boatName" placeholder="New boat name" required>
+    <button type="submit">Add</button>
+</form>
+
+<ul id="boatList">
+    <!-- Dinamik olarak eklenecek tekne isimleri buraya gelecek -->
+</ul>
+
+<script src="script.js"></script>
+
+
+<!--hakkımızda section ends-->
+
+
+<!--tekneler section starts-->
+
+<section class="tekneler" id="Tekneler">
+    <h4 id="tekneler">Boats</h4>    
+    <div class="box-container">
+        <div class="box">
+            <img src="images/kiralık1.jpg" alt="">
+            <h6>BAVARIA CRUISER 46</h6>
+            <div class="price">4.500TL</div>
+            <div class="btn-container">
+                <a href="#" class="btn">Rent</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/kiralık2.jpg" alt="">
+            <h6>HANSE 460</h6>
+            <div class="price">6.000TL</div>
+            <div class="btn-container">
+                <a href="#" class="btn">Rent</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/kiralık3.jpg" alt="">
+            <h6>VF 80-04</h6>
+            <div class="price">15.000TL</div>
+            <div class="btn-container">
+                <a href="#" class="btn">Rent</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--tekneler section ends-->
+
+<!--iletişim section starts-->
+
+<section class="iletisim" id="İletişim">
+    <h4>Contact</h4>
+    <div class="contact-container">
+        <table class="contact-table">
+            <tr>
+                <td>Phone:</td>
+                <td>+90 123 456 7890</td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td>nlsyatcilik@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Adress:</td>
+                <td>İçmeler Mahallesi, Deniz Sokak No: 123,  Tuzla/İstanbul, Türkiye</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<!--iletişim section ends-->
+
+</body>
+</html>

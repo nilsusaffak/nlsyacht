@@ -1,0 +1,335 @@
+
+
+body{
+    background-color: rgb(149, 203, 230);
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo{
+    
+    border-radius: 56px;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+#reservationForm {
+    width: 20%; 
+    margin: 50px auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    float: left;
+    margin-top: 10px;
+}
+
+#reservationForm h2 {
+    text-align: center;
+    margin-bottom: 20px; 
+    
+}
+
+#reservationForm div {
+    margin-bottom: 15px;
+}
+
+#reservationForm label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#reservationForm input[type="text"],
+#reservationForm input[type="email"],
+#reservationForm input[type="password"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#reservationForm .error {
+    display: block;
+    color: red;
+    margin-top: 5px;
+}
+
+#reservationForm button[type="submit"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#reservationForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+h2 {
+    margin-top: 100px; 
+}
+
+.anasayfa .content{
+    min-width: 900px;
+    text-align: center;
+
+}
+
+.anasayfa .content h3{
+    font-size: 400%;
+    color: #0056b3;
+}
+
+.anasayfa .content p{
+    font-size: 3em;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 100px;
+}
+
+.hakkımızda h4{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: #0056b3;
+}
+
+/* Slide container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Resimlerin fade-geçiş  efekti */
+  .fade {
+    display: none;
+    animation: fade 1.5s;
+  }
+  
+  /* Önceki ve Sonraki Düğmeleri */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  /* Sağa git */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Önce git */
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Mouse üzerine gelince (hover) */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Resimlerin üzerine gelecek noktalar (indicator dots) */
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+  }
+  
+  .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+      background-color: #717171;
+  }
+  
+  .mySlides img {
+    width: 400px;
+    height: 500px;
+    border-radius: 56px;
+}
+
+
+
+
+  .hakkımızda {
+    text-align: center;
+    padding: 50px 20px; 
+}
+
+.hakkımızda h5 {
+    padding-bottom: 15px; 
+    font-size: 150%;
+    color: #0056b3;
+}
+
+.hakkımızda p1 {
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
+
+.tekneler {
+    text-align: center;
+    font-size: 150%;
+    color: #0056b3;
+}
+
+.tekneler .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.tekneler .box {
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.tekneler .box img {
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tekneler .box h6 {
+    color: #000;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.tekneler .box .price {
+    color: #000;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+.tekneler .box .btn-container {
+    padding: 1rem 0;
+}
+
+.tekneler .box .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tekneler .box .btn:hover {
+    background-color: #003366;
+}
+
+.iletisim {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 90%;
+    
+}
+
+.iletisim h4{
+    font-size: 150%;
+    color: #0056b3;
+}
+
+.contact-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 50%;
+    max-width: 600px;
+}
+
+.contact-table td {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.contact-table tr:last-child td {
+    border-bottom: none;
+}
+
+.contact-table td:first-child {
+    font-weight: bold;
+}
+
+.contact-table td:nth-child(2) {
+    text-align: left;
+}
+
+
+
+/* dom */
+ 
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: #f0f0f0;
+}
